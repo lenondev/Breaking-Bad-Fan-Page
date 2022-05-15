@@ -1,0 +1,464 @@
+/*Reset inicial*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*HEADER*/
+
+#encabezado{
+    height: 1000px;
+    width: 100%;
+    /* background-color: lightgray; */
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) ,url(../media/HeroimageBRBA.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*MENÚ*/
+
+nav{
+    width: 100%;
+    height: 150px;
+    background-color: rgba(41,40,40,0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#logo{
+    width: 179px;
+    height: 104px;
+    /* background-color: royalblue; */
+    float: left;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+#imgLogo{
+    width: 100%;
+    height: auto;
+}
+
+#menu{
+   list-style-type: none;
+   width: auto;
+   /* height: 100%;
+   background-color: beige; */
+   float: right;
+   margin-right: 75px;
+   overflow: hidden;
+}
+
+.elementoMenu{
+    float: left;
+    /* background-color: olive;
+    border-style: solid; */
+}
+
+.elementoMenu > a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0px 25px;
+    line-height: 150px;
+    transition-property: color, box-shadow;
+    transition-duration: 0.3s;
+}
+
+.elementoMenu > a:hover {
+    color: #33e061;
+    box-shadow: 0px 2.5px rgba(0, 230, 61, 0.684);
+}
+
+
+/*FIN DEL MENÚ*/
+
+#heroTitle{
+    font-size: 9rem;
+    font-weight: normal;
+    font-family: 'OCR A Extended', sans-serif;
+    color: #33e061;
+    /* background-color: orange; */
+    text-align: center;
+    text-shadow: 0px 3px 10px #000000, 0px -3px 10px #000000;
+    position: relative;
+    top: 385px;
+    animation-name: fadein;
+    animation-duration: 2s;
+}
+
+#heroSubtitle{
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    /* background-color: olive; */
+    text-align: center;
+    text-shadow: 0px 3px 10px #000000, 0px -3px 10px #000000;
+    position: relative;
+    top: 405px;
+    opacity: 0;
+    animation-name: fadeinSub;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadein {
+    0% {opacity: 0; top: 420px;}
+    75% {opacity: 1; top: 385px;}
+    100% {opacity: 1; top: 385px;}
+}
+
+@keyframes fadeinSub {
+    0% {opacity: 0;}
+    75% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+/*FIN DEL HEADER*/
+
+/*DESCRIPCIÓN GENERAL*/
+
+#descripcionGeneral{
+    width: 100%;
+    height: 950px;
+    background-color: #0F0F0F;   
+    overflow: hidden;
+}
+
+.tituloSeccion{
+    font-size: 3.5rem;
+    font-weight: normal;
+    font-family: 'OCR A Extended', sans-serif;
+    color: #33e061;
+    /* background-color: olive; */
+    text-align: center;
+    text-shadow: 0px 1px 2px #ffffff;
+    margin-top: 150px;
+}
+
+#contenedorDG{
+    width: 1200px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: yellow; */
+    margin-top: 140px;
+    overflow: hidden;
+}
+
+.colDG{
+    width: 50%;
+    height: 500px;
+    /* background-color: orange;
+    border-style: solid; */
+    float: left;
+
+}
+
+#videoDG{
+    width: calc(100%-75px);
+    background-color: #34E463;
+    height: 325px;
+    margin-right: 75px;
+
+}
+
+.colDG > p {
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-align: justify;
+    line-height: 35px;
+    padding-left: 50px;
+}
+
+/*FIN DE DESCRIPCION GENERAL*/
+
+/*ELENCO*/
+
+#elenco{
+    width: 100%;
+    height: 1210px;
+    /* background-color: #34E463; */
+    background-image: linear-gradient(rgba(0, 230, 61, 0.66),rgba(0, 230, 61, 0.60)), url(../media/fondo-elenco.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.titulosBlanco{
+    font-weight: normal;
+    color: #ffffff;
+    text-shadow: 0px 3px 6px #000000;
+    margin-top: 150px;
+}
+
+#contenedorEtiquetasPestanas{
+    width: 700px;
+    /* background-color: tomato; */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.etiquetasPestanas{
+    width: 50%;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-shadow: 0px 2px 3px #000000;
+    float: left;
+    text-align: center;
+}
+
+#contenedorPersonajes{
+    margin-top: 65px;
+    width: 1275px;
+    height: 800px;
+    /* background-color: lightblue; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.personaje{
+    width: calc(33.33% - 75px);
+    height: calc(50% - 75px);
+    background-color: rgba(41,40,40,0.5);
+    border-style: solid;
+    float: left;
+    margin-right: 37.5px;
+    margin-left: 37.5px;
+    margin-top: 37.5px;
+    margin-bottom: 37.5px;
+}
+
+.imagenPersonaje{
+    width: 100%;
+    height: 250px;
+    background-color: antiquewhite;
+    overflow: hidden;
+    
+}
+
+.imagenPersonaje img {
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.7s;
+}
+
+.imagenPersonaje img:hover {
+    transform: scale(1.1,1.1); 
+}
+
+.nombrePersonaje{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 12px;
+}
+
+.nombreActor{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 10px; 
+}
+
+/*FIN DE ELENCO*/
+
+/*GALERÍA*/
+
+#galeria{
+    width: 100%;
+    height: 980px;
+    background-color: #0F0F0F;
+    overflow: hidden;
+}
+
+#contenedorGaleria{
+    width: 1210px;
+    height: 530px;
+    /* background-color: lightgreen; */
+    margin-top: 95px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imgGal{
+    width: calc(25% - 10px);
+    height: calc(33.33% - 10px);
+    background-color: antiquewhite;
+    border-style: solid;
+    float: left;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+/*FIN DE GALERÍA*/
+
+/*CONTACTO*/
+
+#contacto{
+    width: 100%;
+    height: 950px;
+    /* background-color: #34E463; */
+    background-image: linear-gradient(rgba(0, 230, 61, 0.4),rgba(0, 230, 61, 0.4)), url(../media/fondo-contacto.jpg );
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+#contenedorContacto{
+    width: 1200px;
+    height: 615px;
+    margin-top: 100px;
+    /* background-color: lightblue; */
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+#imgSaulContacto{
+    width: 50%;
+    height: 525px;
+    /* background-color: orange;
+    border-style: solid; */
+    float: left;
+}
+
+#textoMensaje{
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-shadow: 0px 2px 3px #000000;
+}
+
+::placeholder{
+    padding-left: 5px;
+}
+
+#formu{
+    width: 50%;
+    height: 525px;
+    /* background-color: orange;
+    border-style: solid; */
+    float: left;
+    padding-top: 12px;
+    padding-left: 50px;
+}
+
+input{
+    display: block;
+    height: 40px;
+    margin-top: 25px;
+    width: 500px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea{
+    display: block;
+    height: 150px;
+    margin-top: 25px;
+    width: 500px;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+/* #botonEnviar{
+    width: 150px;
+    border-style: none;
+    background-color: #ce2029;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    border-radius: .3rem;
+    cursor: pointer;
+} */
+
+.btnEnviar{
+    padding: 1.5rem 4.5rem;
+    background: #ce2029;
+    border: 0.1rem solid #be2931;
+    cursor: pointer;
+    position: relative;
+    border-radius: .3rem;
+    overflow: hidden;
+    top: 10px;
+}
+
+.btnEnviar::before{
+    content: 'Enviar';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    color: #fff;
+    /* text-transform: uppercase;letter-spacing: .3rem; */
+    font-weight: 500;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+
+.btnEnviar::after{
+    content: '¡Llamar a Saul!';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+    }
+
+.btnEnviar:hover::before{
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+}
+
+.btnEnviar:hover::after{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/*FIN DE CONTACTO*/
+
+/*FOOTER*/
+
+#pie{
+    width: 100%;
+    height: 100px;
+    background-color: #101010;
+    text-align: center;
+}
+
+#pie i {
+    line-height: 100px;
+    color: #33e061;
+    font-size: 3rem;
+    padding: 0px 50px;
+    transition-duration: 0.3s;
+}
+
+#pie i:hover{
+    color: white;
+}
+
+/*FIN DE FOOTER*/
