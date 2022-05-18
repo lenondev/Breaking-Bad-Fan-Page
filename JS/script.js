@@ -47,3 +47,25 @@ function cerrarMBC(){
     document.getElementById("asuntoContacto").value="";
     document.getElementById("textContacto").value="";
 }
+
+//Aquí comienza el código para el menú
+
+var posPreviaScroll = document.documentElement.scrollTop;
+
+window.onscroll = function(){esconderMostrarMenu()}
+
+function esconderMostrarMenu(){
+    var posActualScroll = document.documentElement.scrollTop;
+
+    if (posPreviaScroll > posActualScroll) {
+        document.getElementById("navbar").style.display="block";
+    }
+    else{
+        document.getElementById("navbar").style.display="none"; 
+    }
+
+    posPreviaScroll = posActualScroll;
+    
+}
+
+//Aquí finaliza el código para el menú
