@@ -161,16 +161,22 @@
             <form action="" id="formu">
 
                 <p id="textoMensaje">Mensaje:</p>
-                <input type="email" name="email" placeholder="Email:">
-                <input type="text" name="asunto" placeholder="Asunto:">
+                <input id="emailContacto" type="email" placeholder="Email:" required>
+                <input id="asuntoContacto" type="text" placeholder="Asunto:" required>
                 <!-- <input id="mensajeFormulario" type="text-area" name="consulta" placeholder="Escribe tu mensaje aquí..."> -->
-                <textarea name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."></textarea>
+                <textarea id="textContacto" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."></textarea>
                 <!-- <input id="botonEnviar" type="submit" value="Enviar"> -->
-                <button class="btnEnviar"></button>
+                <button onclick="modalContacto()" class="btnEnviar"></button>
 
             </form>
+        </div>
 
-
+        <div id="modalContacto">
+            <div id="modalBoxC">
+                <h1>¡Has contactado con Saul!</h1>
+                <p id="mensajeContacto"></p>
+                <button onclick="cerrarMBC()">Continuar</button>
+            </div>
         </div>
 
     </section>
