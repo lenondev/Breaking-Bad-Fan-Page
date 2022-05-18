@@ -28,6 +28,14 @@
     padding: 50px;
     border-radius: 25px;
     text-align: center;
+    animation-name: fadeinModal;
+    animation-duration: 4s;
+}
+
+@keyframes fadeinModal {
+    0% {opacity: 0;}
+    75% {opacity: 1;}
+    100% {opacity: 1;}
 }
 
 #modalBoxB > h1{
