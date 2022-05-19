@@ -58,10 +58,35 @@ function esconderMostrarMenu(){
     var posActualScroll = document.documentElement.scrollTop;
 
     if (posPreviaScroll > posActualScroll) {
-        document.getElementById("navbar").style.display="block";
+        //subimos scroll y se muestra el menú
+        document.getElementById("navbar").style.top="0px";
+
+        if (posActualScroll>200) {
+            document.getElementById("navbar").style.height="50px";
+            document.getElementById("navbar").style.fontSize="1.5rem";
+            document.getElementById("menu").style.lineHeight="50px";
+            document.getElementById("submenu").style.top="50px";
+            document.getElementById("logo").style.padding="0px";
+        }
+        else{
+            document.getElementById("navbar").style.height="150px";
+            document.getElementById("navbar").style.fontSize="2rem";
+            document.getElementById("menu").style.lineHeight="150px";
+            document.getElementById("submenu").style.top="100px";
+            document.getElementById("logo").style.padding="15px";
+        }
     }
     else{
-        document.getElementById("navbar").style.display="none"; 
+        //bajamos scroll y se esconde el menú
+        if (posActualScroll<200) {
+            document.getElementById("navbar").style.height="50px";
+            document.getElementById("navbar").style.fontSize="1.5rem";
+            document.getElementById("menu").style.lineHeight="50px";
+            document.getElementById("submenu").style.top="50px";
+            document.getElementById("logo").style.padding="0px";
+        } else {
+            document.getElementById("navbar").style.top="-150px";
+        }
     }
 
     posPreviaScroll = posActualScroll;

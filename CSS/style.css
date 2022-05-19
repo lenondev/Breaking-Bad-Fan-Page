@@ -85,20 +85,22 @@ nav{
     position: fixed;
     top: 0;
     z-index: 1;
+    transition-property: top, height, font-size;
+    transition-duration: 0.75s;
+    font-size: 2rem;
 }
 
 #logo{
-    width: 179px;
-    height: 104px;
-    /* background-color: royalblue; */
+    /* width: 179px;
+    height: 104px; */
+    width: auto;
+    height: 100%;
     float: left;
+    display: block;
     margin-left: 100px;
-    margin-top: 10px;
-}
-
-#imgLogo{
-    width: 100%;
-    height: auto;
+    padding: 15px;
+    transition-property: padding;
+    transition-duration: 0.75s;
 }
 
 #menu{
@@ -109,10 +111,14 @@ nav{
    float: right;
    margin-right: 75px;
    overflow: hidden;
+   line-height: 150px;
+   transition-property: line-height;
+   transition-duration: 0.75s;
 }
 
 .elementoMenu{
     float: left;
+    margin: 0px 25px;
     /* background-color: olive;
     border-style: solid; */
 }
@@ -121,9 +127,7 @@ nav{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-decoration: none;
-    font-size: 2rem;
-    margin: 0px 25px;
-    line-height: 150px;
+    /* font-size: 2rem; */
     transition-property: color, box-shadow;
     transition-duration: 0.3s;
 }
@@ -137,13 +141,13 @@ nav{
 
 #submenu{
     width: auto;
-    height: 150px;
-    margin-left: 25px;
+    height: 110px;
     list-style: none;
     position: absolute;
     top: 100px;
     z-index: 1;
     display: none;
+    background-color: rgba(41,40,40,0.5);
 }
 
 .elementoSubMenu{
@@ -187,7 +191,7 @@ nav{
     position: relative;
     top: 385px;
     animation-name: fadein;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
 
 #heroSubtitle{
@@ -208,9 +212,9 @@ nav{
 }
 
 @keyframes fadein {
-    0% {opacity: 0; top: 420px;}
-    75% {opacity: 1; top: 385px;}
-    100% {opacity: 1; top: 385px;}
+    0% {opacity: 0;}
+    75% {opacity: 1;}
+    100% {opacity: 1;}
 }
 
 @keyframes fadeinSub {
@@ -415,7 +419,6 @@ nav{
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-
 }
 
 #contenedorContacto{
