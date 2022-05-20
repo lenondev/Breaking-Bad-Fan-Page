@@ -94,3 +94,67 @@ function esconderMostrarMenu(){
 }
 
 //Aquí finaliza el código para el menú
+
+var listaRutaImgGal = [];
+var numeroIMG = 0;
+
+
+function lightBox(){
+    var listaImgGal = document.getElementsByClassName("imgGal");
+
+    for (var i = 0; i < listaImgGal.length; i++){
+        listaRutaImgGal.push(listaImgGal[i].src)
+    };
+
+    for (var i = 0; i < listaImgGal.length; i++){
+        listaImgGal[i].addEventListener('click',openLightBox)
+    }
+
+    function openLightBox(){
+        var rutaImgClicada = event.currentTarget.src;
+        numeroIMG = listaRutaImgGal.indexOf(rutaImgClicada);
+
+        document.getElementById("imageToShow").innerHTML="<img class='imageLightBox' src="+listaRutaImgGal[numeroIMG]+">";
+        document.getElementById("modalLightBoxG").style.display="block";
+        document.documentElement.style.overflow="hidden";
+        closeLightBox()
+    }
+
+    function closeLightBox(){
+        window.addEventListener('click', function(event) {
+            if(!event.target.matches(".imageLightBox") && !event.target.matches(".imgGal") && !event.target.matches(".lbButtons") && !event.target.matches(".fa-solid") )
+            {
+                // console.log("Se puede cerrar");
+                document.getElementById("modalLightBoxG").style.display="none";
+                document.documentElement.style.overflow="auto";
+                closeLightBox()   
+            }
+        });
+        
+    }
+
+}
+
+
+function nextImgGal(){
+    numeroIMG++;
+
+    if (numeroIMG==listaRutaImgGal.length) {
+        numeroIMG=0;
+    }
+
+    document.getElementById("imageToShow").innerHTML="<img class='imageLightBox' src="+listaRutaImgGal[numeroIMG]+">";
+}
+
+function prevImgGal(){
+    numeroIMG--;
+
+    if (numeroIMG<0) {
+        numeroIMG=listaRutaImgGal.length-1;
+    }
+
+    document.getElementById("imageToShow").innerHTML="<img class='imageLightBox' src="+listaRutaImgGal[numeroIMG]+">";
+}
+
+
+// Aquí finaliza el código para el modal de la galería
