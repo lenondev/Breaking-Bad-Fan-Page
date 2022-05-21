@@ -5,17 +5,79 @@ function modalBienvenida(){
     document.getElementById("modalBienvenida").style.display="block";
     document.getElementById("heroTitle").style.animationPlayState="paused";
     document.getElementById("heroSubtitle").style.animationPlayState="paused";
-    document.documentElement.style.overflow="hidden";
+    document.documentElement.style.overflowY="hidden";
 }
 
 function cerrarMBB(){
     document.getElementById("modalBienvenida").style.display="none";
     document.getElementById("heroTitle").style.animationPlayState="running";
     document.getElementById("heroSubtitle").style.animationPlayState="running";
-    document.documentElement.style.overflow="auto";
+    document.documentElement.style.overflowY="auto";
 }
 // <<FIN DEL MODAL DE BIENVENIDA>>
 
+// INICIO DEL CARRUSEL AUTOMÁTICO PARA HERO IMAGE
+
+var bgCounter = 0;
+function heroSlideShow(){
+    var listaImgBg = [
+        "url('media/heroImage/HeroimageBRBA.jpg')",
+        "url('media/heroImage/HeroimageBRBA02.jpg')",
+        "url('media/heroImage/HeroimageBRBA03.jpg')"
+    ];
+
+    bgCounter++;
+
+    if (bgCounter == listaImgBg.length) {
+        bgCounter=0;
+    }
+
+    document.getElementById("encabezado").style.backgroundImage="linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),"+listaImgBg[bgCounter];
+}
+
+// FIN DEL CARRUSEL AUTOMÁTICO PARA HERO IMAGE
+
+// INICIO DEL SLIDESHOW HEROIMAGES CON ANIMACIÓN
+
+var counterNext = 0;
+var counterMain = 0;
+
+function slideShowAnim(){
+    var listaImBgAnim = document.getElementsByClassName("fondosHero");
+
+    counterNext++;
+    counterMain=counterNext-1;
+
+    if (counterNext==listaImBgAnim.length) {
+        counterNext=0;
+    }
+
+    if (counterMain<0) {
+        counterMain=listaImBgAnim.length-1;
+    }
+
+    for(var i = 0; i < listaImBgAnim.length; i++){
+
+        listaImBgAnim[i].classList.remove("nextSlide");
+        listaImBgAnim[i].classList.remove("mainSlide");
+        listaImBgAnim[i].classList.remove("hiddenSlide");
+        
+        if (i == counterNext) {
+            listaImBgAnim[i].classList.add("nextSlide");
+        }
+
+        else if (i == counterMain) {
+            listaImBgAnim[i].classList.add("mainSlide");
+        }
+
+        else {
+            listaImBgAnim[i].classList.add("hiddenSlide");
+        }
+    }
+}
+
+
+// FIN DEL SLIDESHOW HEROIMAGES CON ANIMACIÓN
 
 // <<INICIO DEL DESPLIGUE DEL MENÚ>>
 
@@ -130,7 +192,7 @@ function lightBox(){
             {
                 // console.log("Se puede cerrar");
                 document.getElementById("modalLightBoxG").style.display="none";
-                document.documentElement.style.overflow="auto";
+                document.documentElement.style.overflowY="auto";
                 closeLightBox()   
             }
         });
@@ -164,7 +226,7 @@ function prevImgGal(){
 
 function modalContacto(){
     document.getElementById("modalContacto").style.display="block";
-    document.documentElement.style.overflow="hidden";
+    document.documentElement.style.overflowY="hidden";
 
     var email = document.getElementById("emailContacto").value;
     var asunto = document.getElementById("asuntoContacto").value;
@@ -191,7 +253,7 @@ function modalContacto(){
 
 function cerrarMBC(){
     document.getElementById("modalContacto").style.display="none";
-    document.documentElement.style.overflow="auto";
+    document.documentElement.style.overflowY="auto";
 
     document.getElementById("emailContacto").value ="";
     document.getElementById("asuntoContacto").value="";

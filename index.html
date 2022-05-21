@@ -9,20 +9,32 @@
     <link rel="stylesheet" href="./CSS/style.css">
     <!-- OCR-A-EXTENDED -->
     <link href="http://fonts.cdnfonts.com/css/ocr-a-extended" rel="stylesheet">
+    <!-- preloading de HeroImage -->
+    <link rel="preload" as="image" href="media/heroImage/HeroimageBRBA.jpg">
+    <link rel="preload" as="image" href="media/heroImage/HeroimageBRBA02.jpg">
+    <link rel="preload" as="image" href="media/heroImage/HeroimageBRBA03.jpg">
     <!-- Código acceso font awesome -->
     <script src="https://kit.fontawesome.com/d69552edee.js" crossorigin="anonymous"></script>
     <!--Código de nuestro script-->
     <script src="./JS/script.js"></script>
+    <!-- AOS animation library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-    <div id="modalBienvenida">
+    <!-- <div id="modalBienvenida">
         <div id="modalBoxB">
             <h1>FAN-ZONE de Breaking Bad</h1>
             <button onclick="cerrarMBB()">Comenzar</button>
         </div>
-    </div>
+    </div> -->
     
     <header id="encabezado">
+
+        <div class="fondosHero" id="fondoHero1"></div>
+        <div class="fondosHero" id="fondoHero2"></div>
+        <div class="fondosHero" id="fondoHero3"></div>
+
 
         <!-- MENÚ HORIZONTAL -->
         <nav id="navbar">
@@ -52,14 +64,14 @@
 
     <section id="descripcionGeneral">
 
-        <h2 class="tituloSeccion">DESCRIPCIÓN GENERAL</h2>
+        <h2 data-aos="fade-up" class="tituloSeccion">DESCRIPCIÓN GENERAL</h2>
         <div id="contenedorDG">
             <div class="colDG">
                 <div>
-                    <iframe id="videoDG" width="560" height="315" src="https://www.youtube.com/embed/HhesaQXLuRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe data-aos="fade-up" id="videoDG" width="560" height="315" src="https://www.youtube.com/embed/HhesaQXLuRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="colDG">
+            <div data-aos="fade-up" class="colDG">
                 <p>
                     Breaking Bad es una serie estadounidense creada y producida por Vince Gilligan. Narra la historia de Walter White (Bryan Cranston), un profesor de química con problemas económicos a quien le diagnostican un cáncer de pulmón inoperable. Para pagar su tratamiento y asegurar el futuro económico de su familia, comienza a cocinar y vender metanfetamina junto con Jesse Pinkman (Aaron Paul), un antiguo alumno suyo de secundaria.
                 </p>
@@ -70,9 +82,9 @@
 
     <section id="elenco">
 
-        <h2 class="tituloSeccion titulosBlanco">ELENCO</h2>
+        <h2 data-aos="fade-up" class="tituloSeccion titulosBlanco">ELENCO</h2>
 
-        <div id="contenedorEtiquetasPestanas">
+        <div data-aos="fade-up" id="contenedorEtiquetasPestanas">
             <p id="tabPrincipales" onclick="marcarPestanas('principales', 'tabPrincipales')" class="etiquetasPestanas pestanaActiva">Personajes principales</p>
             <p id="tabSecundarios" onclick="marcarPestanas('secundarios', 'tabSecundarios')" class="etiquetasPestanas">Personajes secundarios</p>
         </div>
@@ -174,22 +186,22 @@
 
     <section id="galeria">
 
-        <h2 class="tituloSeccion">GALERÍA</h2>
+        <h2 data-aos="fade-up" class="tituloSeccion">GALERÍA</h2>
 
         <div id="contenedorGaleria">
 
-            <img src="./media/galeria/G1.jpg" alt="" class="imgGal">
-            <img src="./media/galeria/G2.jpg" alt="" class="imgGal">
-            <img src="./media/galeria/G3.jpg" alt="" class="imgGal">
-            <img src="./media/galeria/G4.jpg" alt="" class="imgGal">
-            <img src="./media/galeria/G5.jpg" alt="" class="imgGal">
-            <img src="./media/galeria/G6.jpg" alt="" class="imgGal">
-            <img src="./media/galeria/G7.jpg" alt="" class="imgGal">
-            <img src="./media/galeria/G8.jpg" alt="" class="imgGal">
-            <img src="./media/galeria/G9.jpg" alt="" class="imgGal">
-            <img src="./media/galeria/G10.jpg" alt="" class="imgGal">
-            <img src="./media/galeria/G11.jpg" alt="" class="imgGal">
-            <img src="./media/galeria/G12.jpg" alt="" class="imgGal">
+            <img src="./media/galeria/G1.jpg" alt="" class="imgGal" data-aos="flip-left" data-aos-delay="100">
+            <img src="./media/galeria/G2.jpg" alt="" class="imgGal" data-aos="flip-left" data-aos-delay="200">
+            <img src="./media/galeria/G3.jpg" alt="" class="imgGal" data-aos="flip-left" data-aos-delay="300">
+            <img src="./media/galeria/G4.jpg" alt="" class="imgGal" data-aos="flip-left" data-aos-delay="400">
+            <img src="./media/galeria/G5.jpg" alt="" class="imgGal" data-aos="flip-left" data-aos-delay="100">
+            <img src="./media/galeria/G6.jpg" alt="" class="imgGal" data-aos="flip-left" data-aos-delay="200">
+            <img src="./media/galeria/G7.jpg" alt="" class="imgGal" data-aos="flip-left" data-aos-delay="300">
+            <img src="./media/galeria/G8.jpg" alt="" class="imgGal" data-aos="flip-left" data-aos-delay="400">
+            <img src="./media/galeria/G9.jpg" alt="" class="imgGal" data-aos="flip-left" data-aos-delay="100">
+            <img src="./media/galeria/G10.jpg" alt="" class="imgGal" data-aos="flip-left" data-aos="flip-left" data-aos-delay="200">
+            <img src="./media/galeria/G11.jpg" alt="" class="imgGal" data-aos="flip-left" data-aos="flip-left" data-aos-delay="300">
+            <img src="./media/galeria/G12.jpg" alt="" class="imgGal" data-aos="flip-left" data-aos="flip-left" data-aos-delay="400">
 
         </div>
 
@@ -205,11 +217,11 @@
 
     <section id="contacto">
 
-        <h2 class="tituloSeccion titulosBlanco">CONTACTO</h2>
+        <h2 data-aos="fade-up" class="tituloSeccion titulosBlanco">CONTACTO</h2>
 
-        <div id="contenedorContacto">
+        <div data-aos="fade-up" id="contenedorContacto">
 
-            <img id="imgSaulContacto" src="./media/kisspng-saul-goodman-jesse-pinkman-walter-white-better-cal-breaking-bad-5ad44cd900f023.3607181315238627450039.png" alt="">
+            <img data-aos="fade-up" id="imgSaulContacto" src="./media/kisspng-saul-goodman-jesse-pinkman-walter-white-better-cal-breaking-bad-5ad44cd900f023.3607181315238627450039.png" alt="">
             
             <form action="" id="formu">
 
@@ -243,8 +255,14 @@
     <script>
 
         // modalBienvenida();
+        // setInterval(heroSlideShow, 3000);
+        setInterval(slideShowAnim, 3000);
         lightBox()
 
+    </script>
+
+    <script>
+        AOS.init();
     </script>
 
 </body>
