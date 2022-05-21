@@ -35,8 +35,8 @@
                 <li class="elementoMenu"><a href="#descripcionGeneral">General</a></li>
                 <li class="elementoMenu"><a href="#elenco">Elenco</a>
                     <ul id="submenu">
-                        <li  class="elementoSubMenu"><a href="">Principales</a></li>
-                        <li  class="elementoSubMenu"><a href="">Secundarios</a></li>
+                        <li  class="elementoSubMenu"><a href="#elenco" onclick="marcarPestanas('principales', 'tabPrincipales')">Principales</a></li>
+                        <li  class="elementoSubMenu"><a href="#elenco" onclick="marcarPestanas('secundarios', 'tabSecundarios')">Secundarios</a></li>
                     </ul>
                 </li>
                 <li class="elementoMenu"><a href="#galeria">Galería</a></li>
@@ -73,11 +73,11 @@
         <h2 class="tituloSeccion titulosBlanco">ELENCO</h2>
 
         <div id="contenedorEtiquetasPestanas">
-            <p class="etiquetasPestanas">Personajes principales</p>
-            <p class="etiquetasPestanas">Personajes secundarios</p>
+            <p id="tabPrincipales" onclick="marcarPestanas('principales', 'tabPrincipales')" class="etiquetasPestanas pestanaActiva">Personajes principales</p>
+            <p id="tabSecundarios" onclick="marcarPestanas('secundarios', 'tabSecundarios')" class="etiquetasPestanas">Personajes secundarios</p>
         </div>
 
-        <div id="contenedorPersonajes">
+        <div class="contenedorPersonajes" id="principales">
 
             <div class="personaje">
                 <div class="imagenPersonaje">
@@ -90,8 +90,8 @@
                 <div class="imagenPersonaje">
                     <img src="./media/elenco/jesse-pinkman-elenco.jpg" alt="">
                 </div>
-                <p class="nombrePersonaje">Aaron Paul</p>
-                <p class="nombreActor">Jesse Pinkman</p>
+                <p class="nombrePersonaje">Jesse Pinkman</p>
+                <p class="nombreActor">Aaron Paul</p>
             </div>
             <div class="personaje">
                 <div class="imagenPersonaje">
@@ -123,6 +123,53 @@
             </div>
         </div>
 
+        <div class="contenedorPersonajes" id="secundarios">
+
+            <div class="personaje">
+                <div class="imagenPersonaje">
+                    <img src="./media/elenco/Secundarios/1.Walter_White_Jr.jpg" alt="">
+                </div>
+                <p class="nombrePersonaje">Flynn</p>
+                <p class="nombreActor">RJ Mitte</p>
+            </div>
+            <div class="personaje">
+                <div class="imagenPersonaje">
+                    <img src="./media/elenco/Secundarios/2.Hank_Schrader.jpg" alt="">
+                </div>
+                <p class="nombrePersonaje">Hank Schrader</p>
+                <p class="nombreActor">Dean Norris</p>
+            </div>
+            <div class="personaje">
+                <div class="imagenPersonaje">
+                    <img src="./media/elenco/Secundarios/3.Marie_Schrader.jpg" alt="">
+                </div>
+                <p class="nombrePersonaje">Marie Schrader</p>
+                <p class="nombreActor">Betsy Brandt</p>
+            </div>
+            <div class="personaje">
+                <div class="imagenPersonaje">
+                    <img src="./media/elenco/Secundarios/4.Mike_Ehrmantraut.jpg" alt="">
+                </div>
+                <p class="nombrePersonaje">Mike Ehrmantraut</p>
+                <p class="nombreActor">Jonathan Banks</p>
+            </div>
+            <div class="personaje">
+                <div class="imagenPersonaje">
+                    <img src="./media/elenco/Secundarios/5.Skinny_Pete.jpg" alt="">
+                </div>
+                <p class="nombrePersonaje">Skinny Pete</p>
+                <p class="nombreActor">Charles Baker</p>
+            </div>
+            <div class="personaje">
+                <div class="imagenPersonaje">
+                    <img src="./media/elenco/Secundarios/6.jesse-plemons-breaking-bad.jpg" alt="">
+                </div>
+                <p class="nombrePersonaje">Todd Alquist</p>
+                <p class="nombreActor">Jesse Plemons</p>
+            </div>
+        </div>
+        
+        
     </section>
 
     <section id="galeria">
